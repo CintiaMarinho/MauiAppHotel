@@ -1,223 +1,256 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
-             Title="App Hotel"
-             BackgroundColor="#F4F8F8">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+    Title="App Hotel"
+    BackgroundColor="#F1F7FC">
 
     <ScrollView>
-        <VerticalStackLayout Padding="15"
-                           Spacing="12">
+        <VerticalStackLayout
+            Padding="15"
+            Spacing="12">
 
             <!-- CABEÇALHO -->
-            <Border BackgroundColor="#087E78"
-                    StrokeThickness="0"
-                    StrokeShape="RoundRectangle 18"
-                    Padding="14">
+            <Border
+                BackgroundColor="#1976D2"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 18"
+                Padding="14">
 
                 <VerticalStackLayout Spacing="3">
 
-                    <Label Text="APP HOTEL"
-                           FontSize="24"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           HorizontalTextAlignment="Center"/>
+                    <Label
+                        Text="APP HOTEL"
+                        FontSize="24"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"/>
 
-                    <Label Text="Sua hospedagem começa aqui"
-                           FontSize="13"
-                           TextColor="White"
-                           HorizontalTextAlignment="Center"/>
+                    <Label
+                        Text="Sua hospedagem começa aqui"
+                        FontSize="13"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"/>
 
                 </VerticalStackLayout>
             </Border>
 
-            <!-- TITULO -->
+            <!-- TÍTULO -->
             <VerticalStackLayout Spacing="3">
 
-                <Label Text="Calcule sua diária"
-                       FontSize="23"
-                       FontAttributes="Bold"
-                       TextColor="#164E4A"
-                       HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="Calcule sua diária"
+                    FontSize="23"
+                    FontAttributes="Bold"
+                    TextColor="#163A5F"
+                    HorizontalTextAlignment="Center"/>
 
-                <Label Text="Informe os dados da sua hospedagem"
-                       FontSize="13"
-                       TextColor="#64748B"
-                       HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="Informe os dados da sua hospedagem"
+                    FontSize="13"
+                    TextColor="#60758A"
+                    HorizontalTextAlignment="Center"/>
 
             </VerticalStackLayout>
 
-            <!-- HOSPEDES -->
-            <Border BackgroundColor="White"
-                    Stroke="#DCE7E7"
-                    StrokeShape="RoundRectangle 15"
-                    Padding="12">
+            <!-- HÓSPEDES -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E7F5"
+                StrokeShape="RoundRectangle 15"
+                Padding="12">
 
                 <VerticalStackLayout Spacing="10">
 
-                    <Label Text="Hóspedes"
-                           FontSize="17"
-                           FontAttributes="Bold"
-                           TextColor="#164E4A"/>
+                    <Label
+                        Text="Hóspedes"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#163A5F"/>
 
-                    <Grid ColumnDefinitions="*,Auto,Auto"
-                          RowDefinitions="Auto,Auto"
-                          ColumnSpacing="10"
-                          RowSpacing="8">
+                    <Grid
+                        ColumnDefinitions="*,Auto,Auto"
+                        RowDefinitions="Auto,Auto"
+                        ColumnSpacing="10"
+                        RowSpacing="8">
 
-                        <Label Text="Adultos"
-                               Grid.Row="0"
-                               Grid.Column="0"
-                               TextColor="#334155"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="Adultos"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            TextColor="#34495E"
+                            VerticalOptions="Center"/>
 
-                        <Label Text="{Binding Value}"
-                               Grid.Row="0"
-                               Grid.Column="1"
-                               BindingContext="{x:Reference stp_adultos}"
-                               TextColor="#087E78"
-                               FontAttributes="Bold"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="{Binding Value}"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            BindingContext="{x:Reference stp_adultos}"
+                            TextColor="#1976D2"
+                            FontAttributes="Bold"
+                            VerticalOptions="Center"/>
 
-                        <Stepper x:Name="stp_adultos"
-                                 Grid.Row="0"
-                                 Grid.Column="2"
-                                 Minimum="1"
-                                 Maximum="5"
-                                 Increment="1"
-                                 Scale="0.85"/>
+                        <Stepper
+                            x:Name="stp_adultos"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Minimum="1"
+                            Maximum="5"
+                            Increment="1"
+                            Scale="0.85"/>
 
-                        <Label Text="Crianças"
-                               Grid.Row="1"
-                               Grid.Column="0"
-                               TextColor="#334155"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="Crianças"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            TextColor="#34495E"
+                            VerticalOptions="Center"/>
 
-                        <Label Text="{Binding Value}"
-                               Grid.Row="1"
-                               Grid.Column="1"
-                               BindingContext="{x:Reference stp_criancas}"
-                               TextColor="#087E78"
-                               FontAttributes="Bold"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="{Binding Value}"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            BindingContext="{x:Reference stp_criancas}"
+                            TextColor="#1976D2"
+                            FontAttributes="Bold"
+                            VerticalOptions="Center"/>
 
-                        <Stepper x:Name="stp_criancas"
-                                 Grid.Row="1"
-                                 Grid.Column="2"
-                                 Minimum="0"
-                                 Maximum="5"
-                                 Increment="1"
-                                 Scale="0.85"/>
+                        <Stepper
+                            x:Name="stp_criancas"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Minimum="0"
+                            Maximum="5"
+                            Increment="1"
+                            Scale="0.85"/>
 
                     </Grid>
 
                 </VerticalStackLayout>
             </Border>
 
-            <!-- ACOMODACAO -->
-            <Border BackgroundColor="White"
-                    Stroke="#DCE7E7"
-                    StrokeShape="RoundRectangle 15"
-                    Padding="12">
+            <!-- ACOMODAÇÃO -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E7F5"
+                StrokeShape="RoundRectangle 15"
+                Padding="12">
 
                 <VerticalStackLayout Spacing="7">
 
-                    <Label Text="Acomodação"
-                           FontSize="17"
-                           FontAttributes="Bold"
-                           TextColor="#164E4A"/>
+                    <Label
+                        Text="Acomodação"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#163A5F"/>
 
-                    <Label Text="Selecione sua acomodação:"
-                           FontSize="13"
-                           TextColor="#64748B"/>
+                    <Label
+                        Text="Selecione sua acomodação:"
+                        FontSize="13"
+                        TextColor="#60758A"/>
 
-                    <Picker x:Name="pck_quarto"
-                            Title="Escolha uma acomodação"
-                            TextColor="#164E4A"
-                            BackgroundColor="#F4F8F8"/>
+                    <Picker
+                        x:Name="pck_quarto"
+                        ItemDisplayBinding="{Binding Nome}"
+                        Title="Escolha uma acomodação"
+                        TextColor="#163A5F"
+                        BackgroundColor="#F1F7FC"/>
 
                 </VerticalStackLayout>
             </Border>
 
             <!-- DATAS -->
-            <Border BackgroundColor="White"
-                    Stroke="#DCE7E7"
-                    StrokeShape="RoundRectangle 15"
-                    Padding="12">
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E7F5"
+                StrokeShape="RoundRectangle 15"
+                Padding="12">
 
                 <VerticalStackLayout Spacing="10">
 
-                    <Label Text="Período da hospedagem"
-                           FontSize="17"
-                           FontAttributes="Bold"
-                           TextColor="#164E4A"/>
+                    <Label
+                        Text="Período da hospedagem"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#163A5F"/>
 
-                    <Grid ColumnDefinitions="*,*"
-                          RowDefinitions="Auto,Auto"
-                          ColumnSpacing="8"
-                          RowSpacing="8">
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="Auto,Auto"
+                        ColumnSpacing="8"
+                        RowSpacing="8">
 
-                        <Label Text="Check-in"
-                               Grid.Row="0"
-                               Grid.Column="0"
-                               TextColor="#334155"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="Check-in"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            TextColor="#34495E"
+                            VerticalOptions="Center"/>
 
-                        <DatePicker x:Name="dtpck_checkin"
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Format="dd/MM/yyyy"
-                                    TextColor="#087E78"
-                                    FontSize="13"/>
+                        <DatePicker
+                            x:Name="dtpck_checkin"
+                            DateSelected="dtpck_checkin_DateSelected"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Format="dd/MM/yyyy"
+                            TextColor="#1976D2"
+                            FontSize="13"/>
 
-                        <Label Text="Check-out"
-                               Grid.Row="1"
-                               Grid.Column="0"
-                               TextColor="#334155"
-                               VerticalOptions="Center"/>
+                        <Label
+                            Text="Check-out"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            TextColor="#34495E"
+                            VerticalOptions="Center"/>
 
-                        <DatePicker x:Name="dtpck_checkout"
-                                    Grid.Row="1"
-                                    Grid.Column="1"
-                                    Format="dd/MM/yyyy"
-                                    TextColor="#087E78"
-                                    FontSize="13"/>
+                        <DatePicker
+                            x:Name="dtpck_checkout"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Format="dd/MM/yyyy"
+                            TextColor="#1976D2"
+                            FontSize="13"/>
 
                     </Grid>
 
                 </VerticalStackLayout>
             </Border>
 
-            <!-- BOTAO -->
-            <Button x:Name="btn_calcular"
-                    Text="CALCULAR DIÁRIA"
-                    BackgroundColor="#087E78"
-                    TextColor="White"
-                    FontAttributes="Bold"
-                    FontSize="15"
-                    CornerRadius="12"
-                    HeightRequest="48"
-                    Clicked="btn_calcular_Clicked"/>
+            <!-- BOTÃO CALCULAR -->
+            <Button
+                x:Name="btn_calcular"
+                Text="CALCULAR DIÁRIA"
+                BackgroundColor="#1976D2"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="15"
+                CornerRadius="12"
+                HeightRequest="48"
+                Clicked="btn_calcular_Clicked"/>
 
             <!-- RESULTADO -->
-            <Border BackgroundColor="#E0F2F1"
-                    Stroke="#B8DAD7"
-                    StrokeShape="RoundRectangle 15"
-                    Padding="14">
+            <Border
+                BackgroundColor="#E3F2FD"
+                Stroke="#BBDEFB"
+                StrokeShape="RoundRectangle 15"
+                Padding="14">
 
                 <VerticalStackLayout Spacing="5">
 
-                    <Label Text="Valor total da hospedagem"
-                           FontSize="13"
-                           TextColor="#416C68"
-                           HorizontalTextAlignment="Center"/>
+                    <Label
+                        Text="Valor total da hospedagem"
+                        FontSize="13"
+                        TextColor="#54718F"
+                        HorizontalTextAlignment="Center"/>
 
-                    <Label x:Name="lbl_valor_total"
-                           Text="R$ 0,00"
-                           FontSize="27"
-                           FontAttributes="Bold"
-                           TextColor="#087E78"
-                           HorizontalTextAlignment="Center"/>
+                    <Label
+                        x:Name="lbl_valor_total"
+                        Text="R$ 0,00"
+                        FontSize="27"
+                        FontAttributes="Bold"
+                        TextColor="#1976D2"
+                        HorizontalTextAlignment="Center"/>
 
                 </VerticalStackLayout>
             </Border>
