@@ -217,6 +217,17 @@
                 </VerticalStackLayout>
             </Border>
 
+            <!-- BOTÃO INFORMAÇÕES DO HOTEL -->
+            <Button
+                Text="INFORMAÇÕES DO HOTEL"
+                BackgroundColor="#163A5F"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="14"
+                CornerRadius="12"
+                HeightRequest="45"
+                Clicked="btn_informacoes_Clicked" />
+
             <!-- BOTÃO CALCULAR -->
             <Button
                 x:Name="btn_calcular"

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.InformacoesHotel"
+    Title="Informações do Hotel"
+    BackgroundColor="#F1F7FC">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="20">
+
+            <!-- CABEÇALHO -->
+            <VerticalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Label
+                    Text="🏨 HOTEL"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    TextColor="#1976D2"
+                    HorizontalTextAlignment="Center"/>
+
+                <Label
+                    Text="Informações do Hotel"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="#163A5F"
+                    HorizontalTextAlignment="Center"/>
+
+                <Label
+                    Text="Conheça nossos serviços e acomodações"
+                    FontSize="16"
+                    TextColor="#64748B"
+                    HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <!-- INFORMAÇÕES -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E7F5"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <!-- ACOMODAÇÕES -->
+                    <VerticalStackLayout Spacing="8">
+
+                        <Label
+                            Text="🛏️ Acomodações"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#163A5F"/>
+
+                        <Label
+                            Text="Quartos confortáveis para sua estadia."
+                            FontSize="15"
+                            TextColor="#475569"/>
+
+                    </VerticalStackLayout>
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#D8E7F5"/>
+
+                    <!-- ALIMENTAÇÃO -->
+                    <VerticalStackLayout Spacing="8">
+
+                        <Label
+                            Text="☕ Alimentação"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#163A5F"/>
+
+                        <Label
+                            Text="Café da manhã incluso na diária."
+                            FontSize="15"
+                            TextColor="#475569"/>
+
+                        <Label
+                            Text="Servido das 7h às 10h."
+                            FontSize="15"
+                            TextColor="#475569"/>
+
+                    </VerticalStackLayout>
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#D8E7F5"/>
+
+                    <!-- HORÁRIOS -->
+                    <VerticalStackLayout Spacing="8">
+
+                        <Label
+                            Text="🕒 Horários"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#163A5F"/>
+
+                        <Label
+                            Text="Check-in: a partir das 14h."
+                            FontSize="15"
+                            TextColor="#475569"/>
+
+                        <Label
+                            Text="Check-out: até às 12h."
+                            FontSize="15"
+                            TextColor="#475569"/>
+
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- MENSAGEM FINAL -->
+            <Label
+                Text="Esperamos por você!"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#1976D2"
+                HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
